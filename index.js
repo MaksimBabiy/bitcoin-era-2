@@ -306,8 +306,9 @@ const phoneInput2 = document.querySelector("#phoneInput2");
 const iti =
   phoneInput &&
   window.intlTelInput(phoneInput, {
-    utilsScript:
-      "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/utils.min.js",
+    // utilsScript:
+    //   "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/utils.min.js",
+    utilsScript: "/intl-tel-input/js/utils.js?1715508103106",
     initialCountry: "auto",
     geoIpLookup: (callback) => {
       fetch("https://ipapi.co/json")
@@ -315,6 +316,7 @@ const iti =
         .then((data) => callback(data.country_code))
         .catch(() => callback("us"));
     },
+    strictMode: true,
   });
 
 const iti2 =

@@ -44,6 +44,10 @@
   --green: #20a120;
   --red: #ff0000; }
 
+.iti__search-input {
+  background-color: var(--font-color);
+  color: var(--bg-color); }
+
 .scrollUp {
   width: 50px;
   height: 50px;
@@ -264,7 +268,8 @@ form {
     border: 1px solid var(--border);
     background-color: var(--bg-color);
     color: var(--font-color);
-    border-radius: 5px; }
+    border-radius: 5px;
+    font-size: 15px; }
 
 .container {
   max-width: 1300px;

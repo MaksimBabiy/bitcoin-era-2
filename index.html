@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover Bitcoin Era: Automated cryptocurrency trading platform." />
+    <title
+      >Bitcoin Era ™ – The Updated & Official Website
+      {$smarty.now|date_format:"%Y"}</title
+    >
+    <meta https-equiv="Cache-Control" content="max-age=3153" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+    <link
+      type="image/png"
+      href="images/favicon/favicon-16x16.png"
+      rel="icon"
+      sizes="32x32" />
+    <link
+      type="image/png"
+      href="images/favicon/favicon-32x32.png"
+      rel="icon"
+      sizes="16x16" />
+  </head>
+  <!-- prettier-ignore -->
+  <body>
+    <div id="overlay"></div>
+    <div id="cookies">
+      <div class="container">
+        <div class="cookies_left">
+          <svg width="50" hight="50" class="cookies__icon" viewBox="0 0 512 512" fill="#ffffff"><path d="M257.5 27.6c-.8-5.4-4.9-9.8-10.3-10.6v0c-22.1-3.1-44.6 .9-64.4 11.4l-74 39.5C89.1 78.4 73.2 94.9 63.4 115L26.7 190.6c-9.8 20.1-13 42.9-9.1 64.9l14.5 82.8c3.9 22.1 14.6 42.3 30.7 57.9l60.3 58.4c16.1 15.6 36.6 25.6 58.7 28.7l83 11.7c22.1 3.1 44.6-.9 64.4-11.4l74-39.5c19.7-10.5 35.6-27 45.4-47.2l36.7-75.5c9.8-20.1 13-42.9 9.1-64.9v0c-.9-5.3-5.3-9.3-10.6-10.1c-51.5-8.2-92.8-47.1-104.5-97.4c-1.8-7.6-8-13.4-15.7-14.6c-54.6-8.7-97.7-52-106.2-106.8zM208 144a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM144 336a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm224-64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"></path></svg>
+          <p>Cookies are used on this website to enhance your experience. You can adjust your cookie settings at any time on your computer. By using this website, you agree to our Privacy Policy.</p>
+        </div>
+        <div class="cookies_right">
+          <a class="termsOfUseBtns" href="/policy" data-type="3">Privacy Policy</a>
+        <button class="btn" id="acceptCookie">Accept</button>
+        </div>
+      </div>
+</div>
+    <div class="notification">
+      <svg version="1.1" id="Uploaded to svgrepo.com" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" width="30px" height="30px" viewBox="0 0 32 32" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .feather_een{fill:#ffffff;} .st0{fill:#0B1719;} </style> <path class="feather_een" d="M16.707,14.293l2.769-2.769c0.825-0.825,0.836-2.185,0.025-3.023l-0.002-0.002 C19.085,8.085,18.543,7.878,18,7.878s-1.085,0.207-1.499,0.621L16,9l-0.501-0.501C15.085,8.085,14.543,7.878,14,7.878 s-1.085,0.207-1.499,0.621l-0.002,0.002c-0.811,0.838-0.8,2.198,0.025,3.023l2.769,2.769C15.683,14.683,16.317,14.683,16.707,14.293 z M13.208,9.206C13.42,8.995,13.701,8.878,14,8.878s0.58,0.117,0.792,0.328L16,10.414l1.208-1.208 C17.42,8.995,17.701,8.878,18,8.878s0.58,0.117,0.794,0.33C19.005,9.42,19.122,9.701,19.122,10c0,0.299-0.117,0.58-0.328,0.792 L16,13.586l-2.794-2.794c-0.212-0.212-0.328-0.493-0.328-0.792C12.878,9.701,12.995,9.42,13.208,9.206z M28,6h-1V5 c0-1.657-1.343-3-3-3H8C6.343,2,5,3.343,5,5v1H4C2.343,6,1,7.343,1,9v18c0,1.657,1.343,3,3,3h24c1.657,0,3-1.343,3-3V9 C31,7.343,29.657,6,28,6z M28,7c0.37,0,0.712,0.108,1.01,0.283L27,9.293V7H28z M8,3h16c1.103,0,2,0.897,2,2v5.293l-10,10l-10-10V5 C6,3.897,6.897,3,8,3z M4,7h1v2.293l-2.01-2.01C3.288,7.108,3.63,7,4,7z M2,27V9c0-0.37,0.108-0.712,0.283-1.01L12.293,18 L2.283,28.01C2.108,27.712,2,27.37,2,27z M28,29H4c-0.37,0-0.712-0.108-1.01-0.283L13,18.707L15.293,21 c0.391,0.391,1.024,0.391,1.414,0L19,18.707l10.01,10.01C28.712,28.892,28.37,29,28,29z M30,27c0,0.37-0.108,0.712-0.283,1.01 L19.707,18l10.01-10.01C29.892,8.288,30,8.63,30,9V27z"></path> </g></svg>
+     <div class="notification_content">
+      <h2>Thank you for your interest in Bitcoin Era!</h2>
+      <span>Our managers will contact you shortly.</span>
+     </div>
+    </div>
+    <div class="modal">
+      <div class="modalContent">
+        <form action="">
+          <svg class="modalClose" width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="https://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z" fill="#ffffff"></path> </g></svg>
+          <h2>Create an account</h2>
+          <input type="text" placeholder="First name" required>
+          <input type="text" placeholder="Last name" required>
+          <input type="email" placeholder="Enter your email" class="email" required>
+          <input type="password" placeholder="Enter password" required>
+          <input type="tel" id="phoneInput2" placeholder="Enter phone number" required>
+          <span class="emailError error">Please enter a valid email address</span>
+          <button class="btn" type="button" disabled aria-label="Learn More">Learn More</button>
+          <span class="formError error">Please fill all fields</span>
+          <div class="form_policy">
+            <span>* By submitting you confirm that you've read and accepted the <strong>privacy policy</strong> and <strong>terms of condiiton</strong>.</span>
+            <span>** By submitting this form, i agree to receive all marketing material by email, SMS and telephone.</span>
+            <span>*** All Trading carries risk.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+    <button class="scrollUp" aria-label="Scroll Up">
+      <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="https://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C12.2652 3 12.5196 3.10536 12.7071 3.29289L19.7071 10.2929C20.0976 10.6834 20.0976 11.3166 19.7071 11.7071C19.3166 12.0976 18.6834 12.0976 18.2929 11.7071L13 6.41421V20C13 20.5523 12.5523 21 12 21C11.4477 21 11 20.5523 11 20V6.41421L5.70711 11.7071C5.31658 12.0976 4.68342 12.0976 4.29289 11.7071C3.90237 11.3166 3.90237 10.6834 4.29289 10.2929L11.2929 3.29289C11.4804 3.10536 11.7348 3 12 3Z" fill="#ffffff"></path> </g></svg>
+    </button>
+    <header class="header">
+        <div class="burgerMenuBlock">
+          <div class="burgerMenuBlock-top">
+            <a href="index.html" alt="logo" title="logo">
+              <img src="images/icons/logo.svg" alt="BitcoinEra" width="50px" height="50px" title="BitcoinEra">
+            </a>
+            <button class="burgerClose" aria-label="Close">
+              <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="https://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z" fill="#000000"></path> </g></svg>
+            </button>
+          </div>
+           <nav>
+            <ul class="burgerList">
+              <li><a href="index.html" title="Home">Home</a></li>
+              <li><a href="app.html" title="App">App</a></li>
+              <li><a href="login.html" title="Login">Login</a></li>
+              <li><a href="reviews.html" title="Reviews">Reviews</a></li>
+            </ul>
+           </nav>
+        </div>
+      <div class="container">
+        <div class="header_content">
+          <a href="index.html" class="logo">
+            <img src="images/icons/logo.svg" alt="BitcoinEra" width="50px" height="50px" title="BitcoinEra">
+          </a>
+          <nav>
+            <ul class="navigation">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="app.html">App</a></li>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+          </nav>
+        </div>
+        <button class="btn modalBtn" aria-label="Sign up">Sign up</button>
+        <button aria-label="Menu" class="burgerMenu">
+          <svg class="burgerOpen" id="burgerMenu" width="30px" height="30px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round"></path> <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round"></path> <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round"></path> </g></svg>
+        </button>
+      </div>
+  </header>
+  <main>
+    <section class="title">
+      <div class="container">
+        <div class="title_top">
+          <div class="title_left">
+            <div class="title_left-content">
+              <h1>Bitcoin Era</h1>
+              <p>Bitcoin Era is a cutting-edge automated trading platform meticulously designed to empower novice and seasoned investors to navigate the complexities of the digital asset market with confidence and precision.</p>
+              <p>Harnessing advanced algorithms and AI, the platform leverages real-time data analysis to identify lucrative trading opportunities across a myriad of cryptocurrencies. Our platform executes trades seamlessly with unparalleled speed and accuracy, ensuring optimal entry and exit points to maximise potential returns.</p>
+              <p>Whether you're seeking to diversify your investment portfolio or capitalise on emerging trends in the cryptocurrency landscape, Bitcoin Era UK provides the tools and resources you need to stay ahead of the curve. Join the ranks of savvy investors who trust the Bitcoin Era to unlock the full potential of their trading endeavours.</p>
+            </div>
+          </div>
+          <div class="title_right">
+            <form action="">
+              <h2>Create an account</h2>
+              <input type="text" placeholder="First name" required>
+              <input type="text" placeholder="Last name" required>
+              <input type="password" placeholder="Enter password" id="password" required>
+              <input type="email" placeholder="Enter your email" class="email" id="email" required>
+              <input type="tel" id="phoneInput" placeholder="Enter phone number" required>
+              <span class="emailError error">Please enter a valid email address</span>
+            <button class="btn" type="button" disabled aria-label="Learn More">Learn More</button>
+            <span class="formError error">Please fill all fields</span>
+              <div class="form_policy">
+                <span>* By submitting you confirm that you've read and accepted the <strong>privacy policy</strong> and <strong>terms of condiiton</strong>.</span>
+                <span>** By submitting this form, i agree to receive all marketing material by email, SMS and telephone.</span>
+                <span>*** All Trading carries risk.</span>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="title_bottom">
+          <div class="swiper swiper1 swiper_title">
+            <div class="swiper-wrapper">
+            </div>    
+          </div>
+      </div>
+      </div>
+    </section>
+    <section class="info">
+      <div class="container">
+        <h2>Deciphering the Potential of Automated Cryptocurrency Trading</h2>
+        <p><strong>Bitcoin</strong> Era stands at the forefront of the digital revolution, offering a sophisticated solution for individuals eager to delve into cryptocurrency trading. At its core, Bitcoin Era is an automated trading platform driven by state-of-the-art technology and powered by cutting-edge algorithms.</p>
+        <p><strong>What distinguishes</strong> Bitcoin Era from conventional trading methods? Its reliance on full automation reduces the need for human intervention and the influence of emotional decisions. Bitcoin Era processes extensive market data in real time using cutting-edge algorithms and artificial intelligence. This enables the platform to detect market patterns and trends that human traders might overlook.</p>
+        <p><strong>This automated</strong> approach streamlines the trading process and minimises the risk of human error. Traders can execute transactions with lightning speed and precision, capitalising on opportunities as soon as they arise in Bitcoin Era.</p>
+        <p><strong>Moreover,</strong> Bitcoin Era caters to traders of all skill levels, offering a user-friendly interface and intuitive features that make navigating cryptocurrency trading a breeze. Whether you're a seasoned investor or just dipping your toes into the digital asset market, Bitcoin Era provides the tools and resources you need to succeed.</p>
+        <p><strong>In essence,</strong> Bitcoin Era UK represents a paradigm shift in how we perceive and engage with cryptocurrency trading. It democratises access to the market, empowering individuals from all walks of life to participate in the lucrative world of digital assets. So whether you're looking to diversify your investment portfolio or simply explore new avenues for financial growth, Bitcoin Era is your gateway to success in the fast-paced realm of cryptocurrency trading.</p>
+      </div>
+    </section>
+    <section class="about">
+      <div class="container">
+        <h2>The Triumphant Benefits of Bitcoin Era: Empowering Your Cryptocurrency Trading Journey</h2>
+          <div class="about_bottom-bottom-items">
+            <article>
+              <h3>Advanced Automation</h3>
+              <p>Bitcoin Era harnesses the power of advanced automation to revolutionise how traders navigate the cryptocurrency market. By utilising sophisticated algorithms and artificial intelligence, the platform analyses market trends in real time, identifying lucrative trading opportunities with unparalleled speed and precision. This automation streamlines the trading process and minimises the impact of human emotion and error, allowing traders to execute transactions confidently and efficiently.</p>
+            </article>
+            <article>
+              <h3>Optimised Performance</h3>
+              <p>With Bitcoin Era, traders gain access to a platform optimised for performance and reliability. Whether you're executing trades on a desktop computer or a mobile device, Bitcoin Era delivers seamless functionality, ensuring a smooth and uninterrupted trading experience. Furthermore, the cutting-edge technology enables lightning-fast transaction execution, ensuring that traders can capitalise on market opportunities as soon as they arise without delay or hesitation.</p>
+            </article>
+            <article class="active">
+              <h3>Intuitive Interface</h3>
+              <p>Bitcoin Era prioritises user experience, boasting an easy-to-navigate interface and features designed to accommodate traders at any proficiency level. Whether you're an experienced investor or just starting in the cryptocurrency trading arena, Bitcoin Era equips you with the necessary resources for success. From comprehensive market analysis to customizable trading parameters, the platform empowers users to tailor their trading strategies to their unique preferences and goals, ensuring a personalised and rewarding trading experience for all.</p>
+            </article>
+          </div>
+          <button class="btn modalBtn" aria-label="Join the platform">Join the platform</button>
+        </div>
+      </div>
+    </section>
+    <section class="decoding">
+      <div class="container">
+        <div class="decoding_left">
+          <img src="images/banners/decodingimg.jpg" loading="lazy" title="Decoding the Mechanism of Bitcoin Era: Unveiling the Path to Automated Trading Success" alt="Decoding the Mechanism of Bitcoin Era: Unveiling the Path to Automated Trading Success" width="400" height="554">
+        </div>
+        <div class="decoding_right">
+          <div class="decoding_right-title">
+            <h2>Decoding the Mechanism of Bitcoin Era: Unveiling the Path to Automated Trading Success</h2>
+            <p>Bitcoin Era operates on a sophisticated mechanism engineered to streamline and optimise the cryptocurrency trading process. At its core lies a fusion of advanced technology and intricate algorithms designed to empower traders with the tools they need to succeed in the digital asset market.</p>
+            <p>The mechanism begins with real-time data analysis. Bitcoin Era continuously monitors and analyses market trends, news, and indicators across the cryptocurrency landscape. This comprehensive approach ensures that traders have access to the most up-to-date and relevant information, allowing them to make informed decisions confidently.</p>
+            <p>Next, Bitcoin Era applies advanced algorithms to identify trading opportunities. These algorithms leverage complex mathematical models to recognize patterns and trends within the market, pinpointing potential entry and exit points for trades. By automating this process, Bitcoin Era eliminates the need for manual analysis and decision-making, enabling traders to execute transactions with precision and efficiency.</p>
+            <p>Once a trading opportunity is identified, Bitcoin Era swiftly executes the trade on behalf of the user. The platform is equipped with lightning-fast order execution capabilities, ensuring that trades are processed promptly to capitalise on market movements. This seamless execution minimises delays and slippage, maximising the potential for profit.</p>
+          </div>
+          <div class="decoding_right-content">
+            <div class="swiper swiper2 decoding_swiper">
+              <div class="swiper-wrapper swiper-wrapper2">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="elevating">
+      <div class="container">
+        <h2>Elevating Your Trading Game</h2>
+        <p>Bitcoin Era platform serves as a catalyst for investors looking to elevate their trading endeavours to new heights. Through a combination of advanced technology and intuitive features, Bitcoin Era provides investors with the tools and resources they need to improve their trading strategies and maximise their potential for success in the cryptocurrency market.</p>
+        <p>One of the key ways Bitcoin Era helps investors improve their trading is through its advanced automation capabilities. By leveraging sophisticated algorithms and real-time data analysis, Bitcoin Era identifies trading opportunities with precision and efficiency, eliminating the need for manual analysis and decision-making. This allows investors to capitalise on market movements swiftly and effectively without being hindered by human emotion or bias.</p>
+        <p>Moreover, Bitcoin Era new offerings have a range of customizable trading parameters, allowing investors to tailor their trading strategies to suit their individual preferences and risk tolerance levels. Whether you're a conservative investor seeking steady returns or a more aggressive trader looking to capitalise on high-risk, high-reward opportunities, Bitcoin Era provides the flexibility to adapt to your unique trading style.</p>
+        <p>Also, the user-friendly design and intuitive functionalities of Bitcoin Era ensure it is suitable for investors across all expertise levels. It caters to both experienced traders and those new to cryptocurrency, offering the necessary guidance and support to confidently manage market dynamics. The platform includes detailed market evaluations and timely trading signals, equipping users with critical insights to make educated investment choices and maintain a competitive edge.</p>
+        <p>By leveraging the capabilities of Bitcoin Era, investors elevate their trading strategies, seize lucrative market opportunities, and ultimately fulfil their financial objectives in the dynamic realm of cryptocurrency. With its innovative technology and user-centric approach, Bitcoin Era empowers investors to excel in their trading endeavours and unlock new levels of success.</p>
+        <button class="btn invert modalBtn" aria-label="Start trading cryptocurrency">Start trading cryptocurrency</button>
+      </div>
+    </section>
+    <section class="unlocking">
+      <div class="container">
+        <div class="unlocking_left">
+          <h2>Unlocking Financial Growth: The Significance of Investing</h2>
+          <p>Investing is the cornerstone of financial growth and security. It provides individuals with the opportunity to grow their wealth over time, outpacing inflation and increasing purchasing power. By putting their money to work in various assets, investors can build a diversified portfolio that mitigates risk and maximises returns.</p>
+          <p>Moreover, investing offers a pathway to achieving long-term financial goals, such as retirement planning, buying a home, or funding a child's education. Through strategic investment decisions and disciplined saving habits, individuals can secure their financial future and create a legacy for generations to come.</p>
+          <p>Furthermore, investing fosters economic growth and innovation by channelling capital into productive endeavours. Whether it's funding startups, supporting research and development, or fueling infrastructure projects, investments play a crucial role in driving progress and prosperity in society.</p>
+          <p>In today's digital age, cryptocurrency has emerged as a compelling investment opportunity, offering unique advantages such as decentralisation, security, and global accessibility. Innovative automated trading revolutionises the way investors engage with digital assets, providing a seamless and efficient means of capitalising on the potential of cryptocurrencies.</p>
+          <p>By investing, individuals can tap into the lucrative cryptocurrency trading sphere with confidence and precision. The platform's advanced automation capabilities and real-time data analysis empower investors to identify opportunities, execute trades, and optimise their portfolios with ease. Whether you're a seasoned investor or a newcomer to the cryptocurrency market, Bitcoin Era offers the tools and support you need to unlock financial growth and achieve your investment goals.</p>
+        </div>
+        <div class="unlocking_right">
+          <img src="images/banners/decodingimg.jpg" loading="lazy" title="Unlocking Financial Growth: The Significance of Investing" alt="Unlocking Financial Growth: The Significance of Investing" width="400" height="554">
+        </div>
+      </div>
+    </section>
+    <section class="earning">
+      <div class="container">
+        <div class="earning_top">
+          <h2>Embark on Your Journey to Earning</h2>
+          <p>Starting to earn is a straightforward and rewarding process designed to empower individuals to capitalise on the lucrative opportunities presented by the cryptocurrency market. Here's how you can get started with Bitcoin Era:</p>
+        </div>
+        <div class="earning_bottom">
+          <div class="earning_bottom-item">
+              <h3>Sign Up</h3>
+              <p>The first step is to create an account at Bitcoin Era. Simply visit the website and complete the registration process, which involves providing essential information and verifying your email address.</p>
+          </div>
+          <div class="earning_bottom-item">
+              <h3>Fund Your Account</h3>
+              <p>After setting up your account, the next step is to deposit funds to begin trading. Bitcoin Era supports several payment options, such as credit/debit cards, bank transfers, and deposits made in cryptocurrency.</p>
+          </div>
+          <div class="earning_bottom-item">
+              <h3>Customise Settings</h3>
+              <p>Before you begin trading, take some time to customise your trading settings. Bitcoin Era offers a range of customizable parameters, allowing you to adjust factors such as investment amount, risk level, and trading strategy to suit your preferences and goals.</p>
+          </div>
+          <div class="earning_bottom-item">
+              <h3>Monitor Performance</h3>
+              <p>While features of automated trading do the heavy lifting, it's still important to monitor your account's performance regularly. Keep an eye on your trades at Bitcoin Era, track your profits, and adjust your settings as needed to optimise your results.</p>
+          </div>
+          <div class="earning_bottom-item">
+              <h3>Withdraw Profits</h3>
+              <p>When it's time to convert your earnings into cash, submit a withdrawal request via the platform. Your funds will swiftly and securely transfer to your preferred payment method, enabling you to relish the rewards of your trading triumphs.</p>
+          </div>
+          <div class="earning_bottom-item">
+            <h3>Activate Auto-Trading</h3>
+            <p>With your settings in place, you're ready to activate the auto-trading feature of Bitcoin Era. Advanced algorithms will then start analysing market data in real time, identifying trading opportunities and executing trades on your behalf. Sit back and watch as your investment works for you, generating potential profits around the clock.</p>
+        </div>
+        </div>
+        <button class="btn invert modalBtn" aria-label="Start earning with Bitcoin Era">Start earning with Bitcoin Era</button>
+      </div>
+    </section>
+    <section class="conclusion">
+      <div class="container">
+        <h2>Conclusion: Empower Your Financial Future</h2>
+        <p>In conclusion, Bitcoin Era represents a revolutionary approach to cryptocurrency trading, offering advanced automation, optimised performance, and user-friendly features that empower investors to excel in the dynamic digital asset market. With its advanced mechanism and cutting-edge technology, Bitcoin Era empowers traders by furnishing them with the necessary resources and tools to confidently navigate the intricacies of cryptocurrency trading with precision and assurance.</p>
+        <p>By harnessing the power of this trading platform, investors can unlock fresh avenues for financial growth and achievement. Whether you're a seasoned trader or a newcomer to the world of cryptocurrency, Bitcoin Era offers the flexibility and support you need to achieve your investment goals and secure your financial future.</p>
+        <p>Embark on your journey to earning today and discover the transformative potential of automated cryptocurrency trading. With Bitcoin Era by your side, the possibilities are endless, and your financial success knows no bounds.</p>
+      </div>
+    </section>
+    <section class="faq">
+      <div class="container">
+        <div class="faq_top">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq_bottom active" itemscope="" itemtype="https://schema.org/FAQPage">
+          <article class="accordion-item active" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+            <div class="accordion-item-header">
+              <span class="accordion-item-header-title" itemprop="name">What exactly is Bitcoin Era?</span>
+              <svg xmlns="https://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#0000000" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down accordion-item-header-icon">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </div>
+            <div class="accordion-item-description-wrapper">
+              <div class="accordion-item-description" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                <hr>
+                <p itemprop="text">Bitcoin Era is a robotic trading system that uses AI and sophisticated algorithms to scrutinise market trends and carry out transactions for its users. Designed to streamline the cryptocurrency trading experience, it helps users efficiently exploit market fluctuations without needing extensive trading knowledge.</p>
+              </div>
+            </div>
+          </article>
+          <article class="accordion-item active" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+            <div class="accordion-item-header">
+              <span class="accordion-item-header-title" itemprop="name">What is the operating mechanism of Bitcoin Era?</span>
+              <svg xmlns="https://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#0000000" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down accordion-item-header-icon">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </div>
+            <div class="accordion-item-description-wrapper">
+              <div class="accordion-item-description" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                <hr>
+                <p itemprop="text">Bitcoin Era functions by consistently tracking market trends and indicators and analysing the data in real time to pinpoint potential trading opportunities.</p>
+              </div>
+            </div>
+          </article>
+          <article class="accordion-item active" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+            <div class="accordion-item-header">
+              <span class="accordion-item-header-title" itemprop="name">Is Bitcoin Era safe to use?</span>
+              <svg xmlns="https://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#0000000" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down accordion-item-header-icon">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </div>
+            <div class="accordion-item-description-wrapper">
+              <div class="accordion-item-description" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                <hr>
+                <p itemprop="text">Yes, the platform is designed with security in mind, employing robust encryption protocols to safeguard user data and funds. Additionally, Bitcoin Era partners with reputable brokers to ensure a secure trading environment for all users.</p>
+              </div>
+            </div>
+          </article>
+          <article class="accordion-item active" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+            <div class="accordion-item-header">
+              <span class="accordion-item-header-title" itemprop="name">Can I make money with this platform?</span>
+              <svg xmlns="https://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#0000000" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down accordion-item-header-icon">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </div>
+            <div class="accordion-item-description-wrapper">
+              <div class="accordion-item-description" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                <hr>
+                <p itemprop="text">While there are no guarantees in trading, many users have reported success. The platform's advanced algorithms and automated trading features can help users capitalise on market trends and potentially generate profits. However, it's essential to remember that trading involves risk, and it's crucial to trade responsibly.</p>
+              </div>
+            </div>
+          </article>
+          <article class="accordion-item active" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+            <div class="accordion-item-header">
+              <span class="accordion-item-header-title" itemprop="name">How do I get started?</span>
+              <svg xmlns="https://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#0000000" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down accordion-item-header-icon">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </div>
+            <div class="accordion-item-description-wrapper">
+              <div class="accordion-item-description" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                <hr>
+                <p itemprop="text">Getting started is simple. To get started, navigate to the website and follow the registration steps to set up your account. Once your account is verified, you can deposit funds and customise your trading settings. From there, you can activate the auto-trading feature and let the platform handle the rest.</p>
+              </div>
+            </div>
+          </article>
+          <article class="accordion-item active" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+            <div class="accordion-item-header">
+              <span class="accordion-item-header-title" itemprop="name">Can beginners use BitcoinEra effectively?</span>
+              <svg xmlns="https://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#0000000" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down accordion-item-header-icon">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </div>
+            <div class="accordion-item-description-wrapper">
+              <div class="accordion-item-description" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                <hr>
+                <p itemprop="text">Absolutely, the platform is crafted to be straightforward and approachable for users from any trading background. It features an easy-to-understand interface along with extensive support materials, enabling new traders to explore the cryptocurrency markets confidently.</p>
+              </div>
+            </div>
+          </article>
+          <article class="accordion-item active" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+            <div class="accordion-item-header">
+              <span class="accordion-item-header-title" itemprop="name">Can I withdraw my profits?</span>
+              <svg xmlns="https://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#0000000" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down accordion-item-header-icon">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </div>
+            <div class="accordion-item-description-wrapper">
+              <div class="accordion-item-description" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+                <hr>
+                <p itemprop="text">Yes, Bitcoin Era allows users to withdraw their profits at any time. Simply initiate a withdrawal request through the platform, and your funds will be transferred to your chosen payment method quickly and securely.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+     <div class="footer_top">
+      <div class="container">
+        <h2>Ready to Get Started?</h2>
+        <div class="footer-btns">
+          <button class="btn modalBtn" aria-label="Register Now" >REGISTER NOW</button>
+        </div>
+      </div>
+     </div>
+      <div class="footer_bottom">
+        <div class="container">
+          <a href="index.html" alt="logo" title="logo">
+            <img src="images/icons/logo.svg " alt="logo" width="200px" height="40.3px" title="logo" loading="lazy">
+          </a>
+          <ul class="termsOfUses">
+            <li><a href="/agreement.html" class="termsOfUseBtns" data-type="1">Website Agreement</a></li>
+            <li><a href="/disclamer.html" class="termsOfUseBtns" data-type="2">Risk Disclaimer</a></li>
+            <li><a href="/policy" class="termsOfUseBtns" data-type="3">Privacy Policy</a></li>
+          </ul>
+          <span>Copyright © 2024 test5.ftd.lol. All rights reserved.</span>
+          <ul class="desc">
+            <li>REGULATION &amp; HIGH RISK INVESTMENT WARNING: Trading Forex, CFDs, and Cryptocurrencies carries high risks and may not suit all investors as it could lead to losing your invested capital.</li>
+            <li>USA REGULATION NOTICE: Option trading is not regulated within the United States. Bitcoin Era App is not supervised or regulated by any financial agencies nor US agencies. Any unregulated trading activity by U.S. residents is considered unlawful.</li>
+            <li>SITE RISK DISCLOSURE: Bitcoin Era App does not assume liability for any loss or damage resulting from reliance on information on this site, including educational materials, price quotes, and analysis; be aware of the risks involved in trading the financial markets.</li>
+            <li>LEGAL RESTRICTIONS: You acknowledge that laws regarding financial contracts differ globally, and it is your responsibility to ensure compliance with any laws, regulations, or guidelines in your country of residence related to the use of the Site.</li>
+          </ul>
+        </div>
+      </div>
+  </footer>
+  </body>
+  <script src="index.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/utils.min.js"></script>
+</html>

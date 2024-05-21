@@ -211,7 +211,7 @@ modalClose.addEventListener("click", function () {
   html.classList.remove("active");
   overlay.classList.remove("active");
 });
-let submitBtns = document.querySelectorAll("button[type=button]");
+let submitBtns = document.querySelectorAll("button[type=button].btn");
 let notificationblock = document.querySelector(".notification");
 submitBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -316,7 +316,6 @@ const iti =
         .then((data) => callback(data.country_code))
         .catch(() => callback("us"));
     },
-    strictMode: true,
   });
 
 const iti2 =

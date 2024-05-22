@@ -312,8 +312,9 @@ strong {
   transition: 0.3s all; }
   .btn.anim {
     border: 1px solid transparent;
-    background-color: #fbab7e;
-    background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%); }
+    background-color: #8bc6ec;
+    background-image: linear-gradient(87deg, #8bc6ec 0%, #9599e2 100%);
+    box-shadow: 10px 10px 107px 2px #8bc6ec; }
     .btn.anim:hover {
       border: 1px solid transparent !important; }
   .btn:hover {

@@ -88,10 +88,8 @@ a,
 p {
   max-width: fit-content; }
 
-html {
-  background-color: #d4d6ec; }
-  html.active {
-    overflow-y: hidden; }
+html.active {
+  overflow-y: hidden; }
 
 .iti__country-name {
   color: var(--bg-color);
@@ -101,7 +99,6 @@ input[type="tel"] {
   width: 100%; }
 
 body {
-  margin-top: 20px !important;
   background-color: var(--bg-color);
   max-width: 1300px;
   margin: 0 auto;
@@ -310,13 +307,6 @@ strong {
   justify-content: center;
   cursor: pointer;
   transition: 0.3s all; }
-  .btn.anim {
-    border: 1px solid transparent;
-    background-color: #8bc6ec;
-    background-image: linear-gradient(87deg, #8bc6ec 0%, #9599e2 100%);
-    box-shadow: 10px 10px 107px 2px #8bc6ec; }
-    .btn.anim:hover {
-      border: 1px solid transparent !important; }
   .btn:hover {
     border: 1px solid var(--font-color);
     background-color: var(--bg-color);
@@ -334,6 +324,16 @@ strong {
       border: 1px solid var(--bg-color);
       background-color: var(--font-color);
       color: var(--bg-color); }
+  .btn.anim {
+    color: var(--bg-color);
+    font-size: 16px;
+    border: 1px solid transparent;
+    background-color: #8bc6ec;
+    background-image: linear-gradient(87deg, #8bc6ec 0%, #9599e2 100%);
+    box-shadow: 10px 10px 107px 2px #8bc6ec; }
+    .btn.anim:hover {
+      border: 1px solid transparent !important;
+      color: var(--font-color); }
   .btn:disabled {
     opacity: 0.5;
     cursor: not-allowed; }
